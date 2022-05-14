@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style_main_admin.css">    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Love & Dogs</title>
+</head>
+<body>
+    <header>
+         <!-- Navbar -->
+         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+                <img src="../images/logo-06.png" alt="Imagen logo de Love and Dogs" width="25%">
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="../pages/CRUD_Perros.html" class="nav-item nav-link active">Inicio</a>
+                    <a href="../pages/CRUD_Solicitudes.html" class="nav-item nav-link">Adoptar</a>
+                    <a href="" class="nav-item nav-link">Login <i class="bi bi-arrow-right-circle-fill"></i></a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+       <!-- Carousel -->
+       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images/carousel/1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>ADMINISTRADOR</h1>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../images/carousel/2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>ADMINISTRADOR</h1>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../images/carousel/3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>ADMINISTRADOR</h1>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+      <section class="container w-75 bg-light mt-4 ">
+        <div class="py-5 text-center">        
+          <h2>Registro de Mascota</h2>
+          <div class="input-group mb-3">
+            <input id="txtBuscar" type="text" class="form-control" placeholder="Buscar por nombre o id" aria-label="Buscar por nombre o id" aria-describedby="button-addon2">
+            <button id="btnBuscar" class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+          </div>
+        </div>
+    
+        <div class="row g-5">
+          <div class="col-md-7 col-lg-8">
+            <hr class="my-4">
+            <form method="POST">
+              <div class="row g-3">
+                <div class="col-12">
+                    <label for="txtId" class="form-label">Id: </label> 
+                    <input type="text" class="form-control" id="txtId" required> 
+                  </div>
+                <div class="col-12">
+                  <label for="txtNombre" class="form-label">Nombre: </label> 
+                  <input type="text" class="form-control" id="txtNombre" required> 
+                </div>
+  
+                <div class="col-sm-6">
+                  <label for="txtRaza" class="form-label">Raza: </label>
+                  <input type="text" class="form-control" id="txtRaza" required>
+                 
+                </div>
+    
+                <div class="col-sm-6">
+                  <label for="txtSexo" class="form-label">Sexo:</label>
+                  <select class="form-select border-0" style="height: 55px;">
+                    <option selected>Seleccione</option>
+                    <option value="1">Macho</option>
+                    <option value="2">Hembra</option>
+                </select>               
+                </div>
+                
+                <div class="col-sm-4">
+                  <label for="txtColor" class="form-label">Color:</label>
+                  <select class="form-select border-0" style="height: 55px;">
+                    <option selected>Seleccione</option>
+                    <option value="1">Negro</option>
+                    <option value="2">Café</option>
+                    <option value="2">Canela</option>
+                    <option value="2">Blanco</option>
+                    <option value="2">Manchas</option>
+                </select>                
+                </div>
+              </div>         
+              <hr class="my-4">    
+              <div class="row">
+                <div class="col-sm-4">
+                    <button type="submit" class="w-100 btn btn-success btn-lg">Guardar</button>
+                  </div>
+                  <div class="col-sm-4">
+                    <button type="button" class="w-100 btn  btn-warning btn-lg">Modificar</button>
+                  </div>
+                  <div class="col-sm-4">
+                    <button type="button" class="w-100 btn btn-danger btn-lg">Eliminar</button>
+                  </div>
+                  
+              </div>   
+            </form>
+            <br>
+          </div>
+        </div>
+      </section>
+    </main>
+    <br><br><br>
+        
+    <footer>
+        <div class="row align-items-center justify-content-center">
+            <div class="col-sm-5 d-flex justify-content-center">
+                <div></div>
+                <div>
+                    <h4>Contactos</h4>
+                    <ul>
+                        <li>Numero +593 99 999 9999</li>
+                        <li>Numero +593 88 888 8888</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-5 d-flex justify-content-center">
+                <div></div>
+                <div>
+                    <h4>Dirección</h4>
+                    <img src="../images/Direccion.png" alt="" width="350px" height="200px">
+                    <p>Quito - Juan del Rio y Gabriel de la Huerta</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
